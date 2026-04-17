@@ -31,6 +31,7 @@
                         'primary': '#0B1221',
                         'gold': '#EAB308',
                         'gold-light': '#FACC15',
+                        'whatsapp': '#25D366',
                     }
                 }
             }
@@ -95,6 +96,18 @@
             box-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
         }
 
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.4);
+        }
+
         .hero-gradient {
             background: radial-gradient(circle at center, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
         }
@@ -131,9 +144,28 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .floating-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: pulse-wa 2s infinite;
+        }
+
+        @keyframes pulse-wa {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
     </style>
 </head>
 <body class="selection:bg-gold selection:text-primary">
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5511994611040" target="_blank" class="floating-wa w-16 h-16 bg-whatsapp rounded-full flex items-center justify-center text-white shadow-2xl transition-transform hover:scale-110">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
 
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300">
@@ -151,7 +183,7 @@
             </nav>
             
             <div class="hidden md:block">
-                <a href="#contato" class="gold-button px-6 py-2.5 rounded-full text-sm font-bold">
+                <a href="https://wa.me/5511994611040" target="_blank" class="gold-button px-6 py-2.5 rounded-full text-sm font-bold">
                     Falar com um Especialista
                 </a>
             </div>
@@ -167,7 +199,7 @@
             <a href="#tecnologia" class="text-lg font-medium">Tecnologia</a>
             <a href="#planos" class="text-lg font-medium">Planos</a>
             <a href="#jornada" class="text-lg font-medium">Jornada</a>
-            <a href="#contato" class="gold-button px-6 py-3 rounded-xl text-center font-bold">Falar com um Especialista</a>
+            <a href="https://wa.me/5511994611040" target="_blank" class="gold-button px-6 py-3 rounded-xl text-center font-bold">Falar com um Especialista</a>
         </div>
     </header>
 
@@ -190,7 +222,7 @@
                     Garantimos fluxo de caixa e estabilidade para sua operação por até 10 anos através de licitações públicas com dotação orçamentária carimbada.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contato" class="gold-button px-8 py-4 rounded-full font-bold text-center">
+                    <a href="https://wa.me/5511994611040" target="_blank" class="gold-button px-8 py-4 rounded-full font-bold text-center">
                         Consultoria Gratuita
                     </a>
                     <a href="#tecnologia" class="bg-white/5 hover:bg-white/10 border border-white/20 px-8 py-4 rounded-full font-bold text-center backdrop-blur-sm transition-all">
@@ -440,7 +472,7 @@
                         <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Analista Júnior de Licitação</li>
                         <li class="flex items-center gap-3 opacity-30"><i data-lucide="x-circle" class="w-5 h-5"></i> Gestor Exclusivo</li>
                     </ul>
-                    <a href="#contato" class="w-full py-3 rounded-xl border border-white/20 text-center font-bold hover:bg-white/10 transition-all">Começar Agora</a>
+                    <a href="https://wa.me/5511994611040" target="_blank" class="w-full py-3 rounded-xl border border-white/20 text-center font-bold hover:bg-white/10 transition-all">Começar Agora</a>
                 </div>
                 
                 <!-- Elite (Featured) -->
@@ -460,7 +492,7 @@
                         <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Operação de Pregões Seniores</li>
                         <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Inteligência de Mercado</li>
                     </ul>
-                    <a href="#contato" class="w-full py-4 rounded-xl gold-button text-center font-bold">Quero Escalar Agora</a>
+                    <a href="https://wa.me/5511994611040" target="_blank" class="w-full py-4 rounded-xl gold-button text-center font-bold">Quero Escalar Agora</a>
                 </div>
                 
                 <!-- Mundo System -->
@@ -476,7 +508,7 @@
                         <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Treinamento de Equipe Interna</li>
                         <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Regularização e Certidões</li>
                     </ul>
-                    <a href="#contato" class="w-full py-3 rounded-xl border border-white/20 text-center font-bold hover:bg-white/10 transition-all">Consulte Planos</a>
+                    <a href="https://wa.me/5511994611040" target="_blank" class="w-full py-3 rounded-xl border border-white/20 text-center font-bold hover:bg-white/10 transition-all">Consulte Planos</a>
                 </div>
             </div>
         </div>
@@ -509,10 +541,10 @@
     <!-- Contact Section -->
     <section id="contato" class="py-24">
         <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div data-aos="fade-right">
-                    <h2 class="text-4xl font-bold mb-6 italic">Pronto para dar o próximo passo rumo à hegemonia?</h2>
-                    <p class="text-slate-400 mb-10">Agende uma reunião estratégica com nossos diretores e descubra o real potencial da sua empresa no mercado público.</p>
+                    <h2 class="text-4xl font-bold mb-6 italic leading-tight">Pronto para dar o próximo passo rumo à hegemonia?</h2>
+                    <p class="text-slate-400 mb-10 text-lg">Clique no botão ao lado para iniciar sua consultoria estratégica via WhatsApp agora mesmo.</p>
                     
                     <div class="space-y-6">
                         <div class="flex items-center gap-4">
@@ -529,49 +561,20 @@
                                 <i data-lucide="phone" class="w-6 h-6"></i>
                             </div>
                             <div>
-                                <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Falar com Consultor</p>
-                                <p class="text-white">(11) 3622-6941 / (11) 99461-1040</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-gold">
-                                <i data-lucide="instagram" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Follow us</p>
-                                <p class="text-white">@mundolicitacoes</p>
+                                <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Direct Line</p>
+                                <p class="text-white">(11) 99461-1040</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="glass-card p-8" data-aos="fade-left">
-                    <form class="space-y-6">
-                        <div class="grid sm:grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label class="text-xs font-bold uppercase tracking-wider text-slate-400">Nome</label>
-                                <input type="text" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all" placeholder="Seu nome completo">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-xs font-bold uppercase tracking-wider text-slate-400">WhatsApp</label>
-                                <input type="text" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all" placeholder="(00) 00000-0000">
-                            </div>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-xs font-bold uppercase tracking-wider text-slate-400">Empresa / Ramo</label>
-                            <input type="text" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all" placeholder="Qual o seu negócio?">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-xs font-bold uppercase tracking-wider text-slate-400">Objetivo</label>
-                            <select class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all text-slate-400">
-                                <option>Quero licitar mas não sei por onde começar</option>
-                                <option>Já licito mas quero escalar resultados</option>
-                                <option>Quero tecnologia (Mundo System)</option>
-                                <option>Regularização Contábil/Fiscal</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="w-full gold-button py-4 rounded-xl font-bold uppercase tracking-widest text-sm">Enviar Solicitação</button>
-                    </form>
+                <div class="flex justify-center" data-aos="fade-left">
+                    <a href="https://wa.me/5511994611040" target="_blank" class="whatsapp-button group relative px-10 py-6 rounded-2xl font-bold flex flex-col items-center gap-4 text-center">
+                        <div class="absolute -top-4 bg-white text-whatsapp text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-xl">Atendimento Imediato</div>
+                        <i data-lucide="message-circle" class="w-12 h-12"></i>
+                        <span class="text-xl">Falar com um Especialista</span>
+                        <p class="text-xs opacity-80 font-normal">Resposta rápida via WhatsApp</p>
+                    </a>
                 </div>
             </div>
         </div>
