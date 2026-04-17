@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Licitações | Assessoria de Alta Performance</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4XZ2MZ1ZJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-D4XZ2MZ1ZJ');
+    </script>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Transforme o Governo no seu maior cliente. Assessoria comercial, contábil e jurídica de alta performance para licitações públicas.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0B1221',
+                        'gold': '#EAB308',
+                        'gold-light': '#FACC15',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- External Dependencies CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #0B1221;
+            --gold-accent: #EAB308;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--primary-blue);
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: var(--gold-accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #FACC15 0%, #EAB308 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-button {
+            background: linear-gradient(135deg, #FACC15 0%, #EAB308 100%);
+            color: #0b1221;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gold-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at center, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+        }
+
+        .timeline-line {
+            background: linear-gradient(to bottom, transparent, var(--gold-accent), transparent);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--primary-blue);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-accent);
+        }
+
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal-text.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="selection:bg-gold selection:text-primary">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="logo.png" alt="Mundo Licitações Logo" class="h-10 md:h-12 w-auto">
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#solucoes" class="hover:text-gold transition-colors">Soluções</a>
+                <a href="#tecnologia" class="hover:text-gold transition-colors">Tecnologia</a>
+                <a href="#planos" class="hover:text-gold transition-colors">Planos</a>
+                <a href="#jornada" class="hover:text-gold transition-colors">Jornada</a>
+                <a href="#contato" class="hover:text-gold transition-colors">Contato</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <a href="#contato" class="gold-button px-6 py-2.5 rounded-full text-sm font-bold">
+                    Falar com um Especialista
+                </a>
+            </div>
+            
+            <button id="mobile-menu-btn" class="md:hidden text-white">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-slate-900/95 backdrop-blur-xl border-t border-white/10 flex-col p-6 space-y-4 md:hidden">
+            <a href="#solucoes" class="text-lg font-medium">Soluções</a>
+            <a href="#tecnologia" class="text-lg font-medium">Tecnologia</a>
+            <a href="#planos" class="text-lg font-medium">Planos</a>
+            <a href="#jornada" class="text-lg font-medium">Jornada</a>
+            <a href="#contato" class="gold-button px-6 py-3 rounded-xl text-center font-bold">Falar com um Especialista</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent z-10"></div>
+            <img src="hero_img.png" alt="Tecnologia e Governo" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-20">
+            <div class="max-w-3xl" data-aos="fade-right">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-gold/10 border border-gold/20 text-gold text-xs font-bold tracking-widest uppercase mb-6">
+                    Mundo Licitações - Inovação & Tecnologia
+                </span>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-8">
+                    Transforme o <span class="gold-gradient">Governo</span> no seu Maior Cliente.
+                </h1>
+                <p class="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
+                    Garantimos fluxo de caixa e estabilidade para sua operação por até 10 anos através de licitações públicas com dotação orçamentária carimbada.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contato" class="gold-button px-8 py-4 rounded-full font-bold text-center">
+                        Consultoria Gratuita
+                    </a>
+                    <a href="#tecnologia" class="bg-white/5 hover:bg-white/10 border border-white/20 px-8 py-4 rounded-full font-bold text-center backdrop-blur-sm transition-all">
+                        Conheça o Mundo System
+                    </a>
+                </div>
+                
+                <div class="mt-16 flex items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                    <p class="text-sm font-semibold text-slate-400">REFERÊNCIA EM:<br>ALTA PERFORMANCE</p>
+                    <div class="h-px w-20 bg-slate-700"></div>
+                    <div class="flex gap-6">
+                        <span class="text-xs tracking-widest uppercase font-bold">COMERCIAL</span>
+                        <span class="text-xs tracking-widest uppercase font-bold">CONTÁBIL</span>
+                        <span class="text-xs tracking-widest uppercase font-bold">JURÍDICO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <i data-lucide="chevron-down" class="w-6 h-6"></i>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section id="solucoes" class="py-24 bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Nossos Pilares de Atuação</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Uma assessoria 360º que combina inteligência estratégica com blindagem operacional completa.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Comercial -->
+                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Comercial</h3>
+                    <p class="text-slate-400 mb-6 font-light">Prospecção ativa e intermediação estratégica em negócios públicos e privados. Mapeamos as melhores oportunidades para o seu nicho.</p>
+                    <ul class="text-sm space-y-3 text-slate-300">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Prospecção Ativa</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Intermediação Estratégica</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Network Governamental</li>
+                    </ul>
+                </div>
+                
+                <!-- Contábil -->
+                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center text-gold mb-6">
+                        <i data-lucide="file-text" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Contábil</h3>
+                    <p class="text-slate-400 mb-6 font-light">Blindagem fiscal, balanços patrimoniais e licenciamentos. Garantimos que sua empresa esteja 100% habilitada para vencer.</p>
+                    <ul class="text-sm space-y-3 text-slate-300">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Blindagem Fiscal</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Balanços Patrimoniais</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Habilitação Plena</li>
+                    </ul>
+                </div>
+                
+                <!-- Jurídico -->
+                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center text-red-400 mb-6">
+                        <i data-lucide="shield" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Jurídico</h3>
+                    <p class="text-slate-400 mb-6 font-light">Análise de editais, impugnações e defesas administrativas estratégicas lideradas por especialistas em direito administrativo.</p>
+                    <ul class="text-sm space-y-3 text-slate-300">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Análise de Editais</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Defesas Estratégicas</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Impugnações Rápidas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="tecnologia" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">A <span class="gold-gradient">Inteligência Artificial</span> a favor do seu Faturamento</h2>
+                    <p class="text-slate-300 mb-8 leading-relaxed">
+                        Nossos analistas e gestores operam com ferramentas de ponta para escalar seus resultados. O <strong>Mundo System</strong> é o motor tecnológico que garante que nenhuma oportunidade escape do seu radar.
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                            <i data-lucide="search" class="w-6 h-6 text-gold mt-1"></i>
+                            <div>
+                                <h4 class="font-bold mb-1">Varredura 24/7</h4>
+                                <p class="text-sm text-slate-400">Monitoramento constante de novos pregões em todo o país.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                            <i data-lucide="bell" class="w-6 h-6 text-gold mt-1"></i>
+                            <div>
+                                <h4 class="font-bold mb-1">Certidões Automáticas</h4>
+                                <p class="text-sm text-slate-400">Controle automatizado de validade de todos os documentos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                            <i data-lucide="layout-dashboard" class="w-6 h-6 text-gold mt-1"></i>
+                            <div>
+                                <h4 class="font-bold mb-1">Gestão via CRM</h4>
+                                <p class="text-sm text-slate-400">Controle total dos seus contratos governamentais em tempo real.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                            <i data-lucide="cpu" class="w-6 h-6 text-gold mt-1"></i>
+                            <div>
+                                <h4 class="font-bold mb-1">IA de Viabilidade</h4>
+                                <p class="text-sm text-slate-400">Algoritmo que analisa editais e estima chances de vitória.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 relative" data-aos="zoom-in">
+                    <div class="absolute -inset-4 bg-gold/20 blur-3xl opacity-20 animate-pulse"></div>
+                    <div class="relative glass-card p-4 overflow-hidden">
+                        <div class="bg-slate-950 rounded-lg p-6 border border-white/10">
+                            <div class="flex items-center justify-between mb-8">
+                                <span class="text-xs font-mono text-gold">SYSTEM_STATUS: ACTIVE</span>
+                                <div class="flex gap-1.5">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-4 font-mono text-xs">
+                                <div class="text-blue-400">> Scanning federal_gov_v23_API...</div>
+                                <div class="text-green-400">[SUCCESS] Opportunidade detectada: Pregão Eletrônico 45/2024</div>
+                                <div class="text-slate-500">Valor Estimado: R$ 4.520.000,00</div>
+                                <div class="text-slate-500">Dotação: Garantida (Imutável)</div>
+                                <div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gold w-3/4 animate-pulse"></div>
+                                </div>
+                                <div class="text-gold mt-4">Calculando viabilidade via IA... [98.2%]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Victory Journey -->
+    <section id="jornada" class="py-24 bg-slate-900/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Jornada da Vitória</h2>
+                <p class="text-slate-400">O caminho validado para escalar o seu faturamento com segurança.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Vertical Line -->
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-gold/50 to-transparent -translate-x-1/2 hidden md:block"></div>
+                
+                <div class="space-y-16">
+                    <!-- Step 01 -->
+                    <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h4 class="text-2xl font-bold mb-2">01. Regularização</h4>
+                            <p class="text-slate-400">Blindagem fiscal e jurídica completa. Organizamos sua casa para os maiores duelos.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 w-8 h-8 rounded-full bg-primary border-4 border-gold z-10 -translate-x-1/2 flex items-center justify-center">
+                            <div class="w-2 h-2 rounded-full bg-gold"></div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                    
+                    <!-- Step 02 -->
+                    <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="absolute left-4 md:left-1/2 w-8 h-8 rounded-full bg-primary border-4 border-gold z-10 -translate-x-1/2 flex items-center justify-center">
+                            <div class="w-2 h-2 rounded-full bg-gold"></div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <h4 class="text-2xl font-bold mb-2">02. Habilitação</h4>
+                            <p class="text-slate-400">Preparação minuciosa de documentos e atestados. Zero risco de inabilitação técnica.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 03 -->
+                    <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h4 class="text-2xl font-bold mb-2">03. Inteligência</h4>
+                            <p class="text-slate-400">Análise técnica de editais e precificação estratégica com foco em margem real.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 w-8 h-8 rounded-full bg-primary border-4 border-gold z-10 -translate-x-1/2 flex items-center justify-center">
+                            <div class="w-2 h-2 rounded-full bg-gold"></div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                    
+                    <!-- Step 04 -->
+                    <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="absolute left-4 md:left-1/2 w-8 h-8 rounded-full bg-primary border-4 border-gold z-10 -translate-x-1/2 flex items-center justify-center">
+                            <div class="w-2 h-2 rounded-full bg-gold"></div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <h4 class="text-2xl font-bold mb-2">04. Pregão</h4>
+                            <p class="text-slate-400">Participação estratégica em leilões via bots e operadores seniores de alta performance.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 05 -->
+                    <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h4 class="text-2xl font-bold mb-2">05. Contrato</h4>
+                            <p class="text-slate-400">Assinatura do contrato de longo prazo. Estabilidade garantida para os próximos anos.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 w-8 h-8 rounded-full bg-primary border-4 border-gold z-10 -translate-x-1/2 flex items-center justify-center">
+                            <div class="w-2 h-2 rounded-full bg-gold"></div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="planos" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Escolha sua Estratégia</h2>
+                <p class="text-slate-400">Diferentes níveis de operação para diferentes momentos do seu negócio.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Start -->
+                <div class="glass-card p-8 flex flex-col border-white/5" data-aos="fade-up" data-aos-delay="0">
+                    <h4 class="text-xl font-bold mb-2">Assessoria Start</h4>
+                    <p class="text-slate-400 text-sm mb-6">Validação rápida e baixa exposição.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold underline decoration-gold">Consultar</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow text-sm text-slate-300">
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Varredura de Oportunidades</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Gestão de Certidões</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Analista Júnior de Licitação</li>
+                        <li class="flex items-center gap-3 opacity-30"><i data-lucide="x-circle" class="w-5 h-5"></i> Gestor Exclusivo</li>
+                    </ul>
+                    <a href="#contato" class="w-full py-3 rounded-xl border border-white/20 text-center font-bold hover:bg-white/10 transition-all">Começar Agora</a>
+                </div>
+                
+                <!-- Elite (Featured) -->
+                <div class="glass-card p-8 flex flex-col border-gold/50 relative transform scale-105 shadow-2xl z-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-primary text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest">
+                        Mais Requisitado
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Elite Full Service</h4>
+                    <p class="text-gold text-sm mb-6">Hegemonia Total e Grandes Volumes.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold underline decoration-gold">Hegemonia</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow text-sm text-slate-200">
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Tudo do plano Start</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Gestor Exclusivo de Licitações</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Blindagem Jurídica Ilimitada</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Operação de Pregões Seniores</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Inteligência de Mercado</li>
+                    </ul>
+                    <a href="#contato" class="w-full py-4 rounded-xl gold-button text-center font-bold">Quero Escalar Agora</a>
+                </div>
+                
+                <!-- Mundo System -->
+                <div class="glass-card p-8 flex flex-col border-white/5" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-xl font-bold mb-2">Mundo System</h4>
+                    <p class="text-slate-400 text-sm mb-6">Tecnologia para sua equipe operar.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold underline decoration-gold">SaaS</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow text-sm text-slate-300">
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Licença de Software</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Radar IA Integrado</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Treinamento de Equipe Interna</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-gold"></i> Regularização e Certidões</li>
+                    </ul>
+                    <a href="#contato" class="w-full py-3 rounded-xl border border-white/20 text-center font-bold hover:bg-white/10 transition-all">Consulte Planos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-24 bg-gold/5">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto glass-card p-12 border-gold/20" data-aos="zoom-in">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3">
+                        <div class="w-32 h-32 bg-gold/20 rounded-full flex items-center justify-center border-4 border-gold/40">
+                            <i data-lucide="lock" class="w-16 h-16 text-gold"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-3xl font-bold mb-4">Segurança Inabalável: <span class="text-gold">Nota de Empenho</span></h3>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            O documento mais seguro do direito administrativo brasileiro. No momento do empenho, o recurso já está separado no orçamento especificamente para sua empresa.
+                        </p>
+                        <div class="bg-primary/50 p-4 rounded-lg border-l-4 border-gold italic text-sm text-slate-400">
+                            "Risco mínimo de inadimplência. É o único mercado onde o pagador já reserva o dinheiro antes de você entregar o serviço."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold mb-6 italic">Pronto para dar o próximo passo rumo à hegemonia?</h2>
+                    <p class="text-slate-400 mb-10">Agende uma reunião estratégica com nossos diretores e descubra o real potencial da sua empresa no mercado público.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-gold">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Localização</p>
+                                <p class="text-white">São Paulo - SP</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-gold">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Falar com Consultor</p>
+                                <p class="text-white">(11) 3622-6941 / (11) 99461-1040</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-gold">
+                                <i data-lucide="instagram" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Follow us</p>
+                                <p class="text-white">@mundolicitacoes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8" data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-slate-400">Nome</label>
+                                <input type="text" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all" placeholder="Seu nome completo">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-slate-400">WhatsApp</label>
+                                <input type="text" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all" placeholder="(00) 00000-0000">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-400">Empresa / Ramo</label>
+                            <input type="text" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all" placeholder="Qual o seu negócio?">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-400">Objetivo</label>
+                            <select class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-gold outline-none transition-all text-slate-400">
+                                <option>Quero licitar mas não sei por onde começar</option>
+                                <option>Já licito mas quero escalar resultados</option>
+                                <option>Quero tecnologia (Mundo System)</option>
+                                <option>Regularização Contábil/Fiscal</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full gold-button py-4 rounded-xl font-bold uppercase tracking-widest text-sm">Enviar Solicitação</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 bg-slate-950">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <img src="logo.png" alt="Mundo Licitações" class="h-12 opacity-80">
+                <div class="flex gap-6 mt-8 md:mt-0">
+                    <a href="#" class="text-slate-500 hover:text-gold transition-all"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-gold transition-all"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-gold transition-all"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between text-slate-600 text-[10px] uppercase font-bold tracking-[0.2em]">
+                <div>
+                    CNPJ: 45.857.250/0001-80 | © 2024 Mundo Licitações. Todos os direitos reservados.
+                </div>
+                <div class="mt-4 md:mt-0 flex gap-6">
+                    <a href="#" class="hover:text-gold">Políticas de Privacidade</a>
+                    <a href="#" class="hover:text-gold">Termos de Uso</a>
+                </div>
+            </div>
+            <div class="text-center mt-12 text-slate-400 text-sm italic">
+                "Mundo Licitações - Inovação & Tecnologia"
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+
+            // Header scroll effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('py-2', 'bg-slate-900/80', 'backdrop-blur-md', 'shadow-lg');
+                    header.classList.remove('py-4', 'bg-transparent');
+                } else {
+                    header.classList.add('py-4', 'bg-transparent');
+                    header.classList.remove('py-2', 'bg-slate-900/80', 'backdrop-blur-md', 'shadow-lg');
+                }
+            });
+
+            // Lucide Icons initialization
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+
+            // Anchor links smooth scroll adjustment
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                        
+                        // Close mobile menu if open
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenu.classList.remove('flex');
+                        }
+                    }
+                });
+            });
+
+            // Reveal text animation trigger
+            const revealElements = document.querySelectorAll('.reveal-text');
+            const revealOnScroll = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            revealElements.forEach(el => revealOnScroll.observe(el));
+        });
+    </script>
+</body>
+</html>
